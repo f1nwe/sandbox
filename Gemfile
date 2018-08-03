@@ -7,17 +7,23 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'annotate'
+gem 'haml'
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 gem 'mysql2', '~> 0.5.0'
+gem 'paperclip', '~> 6.0.0'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.6'
 gem 'sass-rails', '~> 5.0'
+gem 'slim-rails'
 gem 'turbolinks', '~> 5'
-gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'pry-rails'
-  gem 'rspec'
+  gem 'rspec-rails'
 end
 
 group :development do
