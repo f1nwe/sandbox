@@ -1,0 +1,72 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/mkmf.log
+
+# Ignore databases from docker
+/.docker/*
+!/.docker/.keep
+
+# Ignore Byebug command history file.
+.byebug_history
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore test coverage
+/coverage
+
+# Ignore Byebug command history file.
+.byebug_history
+
+# Ignore coverage
+/coverage
+
+# Ignore application configuration
+/config/cable.yml
+/config/redis.yml
+/spec/tmp/*
+/cache
+/.ruby-version
+/.ruby-gemset
+/.env
+/.tool-versions
+
+# Docker local configs
+/docker-compose.yml
+/Dockerfile-base
+/Dockerfile
+/docker-compose.services.yml
+
+# Ignore api documentation
+/doc/api/*
+
+.DS_Store
+.idea/*
+erd.pdf
+
+public/delete_me
+public/images
+public/csv
+public/system/custom_attribute_value/
+pdfs
+
+# Configs
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+# Vim Swap Files
+*.swp
+/TAGS
