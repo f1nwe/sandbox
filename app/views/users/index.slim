@@ -1,0 +1,10 @@
+#target
+#grid.clearfix
+  - @users.each do |user|
+    .grid-item{class= "grid-item--width#{rand(1..4)}"}
+      = image_tag user.avatar
+
+= wicked_pdf_stylesheet_link_tag 'users'
+= wicked_pdf_javascript_include_tag 'jquery'
+= wicked_pdf_javascript_include_tag 'jquery.justified.min.js'
+= wicked_pdf_javascript_include_tag 'users'

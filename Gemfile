@@ -18,6 +18,8 @@ gem 'rails', '~> 5.1.6'
 gem 'sass-rails', '~> 5.0'
 gem 'slim-rails'
 gem 'turbolinks', '~> 5'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 group :development, :test do
   gem 'factory_bot_rails'

@@ -12,5 +12,5 @@ $('#target').justifiedImages({
   thumbnailPath: (photo, width, height) => {
     return photo.src
   },
-  maxRowHeight: '250px'
+  rowHeight: '250'
 })
