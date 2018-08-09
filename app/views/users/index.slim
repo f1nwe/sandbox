@@ -1,8 +1,8 @@
-#target-container.{style='width: 800px; heigh: 200, background-color=grey'}
+#target-container.{style='border: 5px solid black; width: 800px; height: 330px; background: yellow'}
 
 #grid
   - @users.each.with_index do |user, index|
-    .grid-item{style='visibility: hidden'}
+    .grid-item
       = wicked_pdf_image_tag user.avatar, id: "img-#{index}"
 
 = wicked_pdf_stylesheet_link_tag 'jquery.justified.css'
@@ -14,4 +14,4 @@
 
 
 javascript:
-  showPhotos($('.grid-item img'))
+  showPhotos($('#grid img'))
