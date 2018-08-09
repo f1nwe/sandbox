@@ -1,16 +1,23 @@
-//= require jquery
-//= require jquery.justified.min.js
-
-$('#target').justifiedImages({
-  images: $('.grid-item img'),
-  getSize: (photo) => {
-    return {
-      width: photo.width,
-      height: photo.height
-    }
-  },
-  thumbnailPath: (photo, width, height) => {
-    return photo.src
-  },
-  rowHeight: '250'
-})
+function showPhotos(photos) {
+  $('#target-container').empty().justifiedImages({
+                  images: photos ,
+                  thumbnailPath: function(photo) {
+                    return photo.src
+                  } ,
+                  getSize: function(photo) {
+                    return { width: photo.width, height: photo.height };
+                  }
+                  /*,
+                  appendBlocks: function(){
+                      return [{
+                          rowNum : 1,
+                          width : 150,
+                          html : '<a href="#">Add Photo</a>'
+                      },{
+                          rowNum : -1,
+                          width : 150,
+                          html : '<a href="#">Add Last Photo</a>'
+                      }]
+                  }*/
+              });
+}

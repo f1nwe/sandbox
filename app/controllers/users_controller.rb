@@ -2,14 +2,11 @@
 
 class UsersController < ApplicationController
   def index
-    @users = User.all.last(5)
+    @users = User.all.last(10)
 
-    render(
-      pdf:        'template',
-      template:   'users/index',
-      show_as_html: params.key?('debug'),
-      page_size: 'Letter',
-      javascript_delay: 10000
-    )
+    respond_to do |format|
+      format.pdf { render pdf: 'file' }
+      format.html
+    end
   end
 end

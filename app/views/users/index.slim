@@ -1,10 +1,17 @@
-#target
-#grid.clearfix
-  - @users.each do |user|
-    .grid-item{class= "grid-item--width#{rand(1..4)}"}
-      = image_tag user.avatar
+#target-container.{style='width: 800px; heigh: 200, background-color=grey'}
 
+#grid
+  - @users.each.with_index do |user, index|
+    .grid-item{style='visibility: hidden'}
+      = wicked_pdf_image_tag user.avatar, id: "img-#{index}"
+
+= wicked_pdf_stylesheet_link_tag 'jquery.justified.css'
 = wicked_pdf_stylesheet_link_tag 'users'
-= wicked_pdf_javascript_include_tag 'jquery'
-= wicked_pdf_javascript_include_tag 'jquery.justified.min.js'
+
+= wicked_pdf_javascript_include_tag 'jquery.min.js'
+= wicked_pdf_javascript_include_tag 'jquery.justified.js'
 = wicked_pdf_javascript_include_tag 'users'
+
+
+javascript:
+  showPhotos($('.grid-item img'))

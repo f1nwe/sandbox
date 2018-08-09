@@ -1,13 +1,11 @@
-//= require 'jquery.justified'
-
 #target {
   background: grey;
-  // width: 1200px;
+  width:  800px;
   height: 500px;
   border: 5px solid black;
 }
 
-#grid img {
-  visibility: hidden;
+#grid {
+  visibility: hidden
 }
 
